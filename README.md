@@ -147,3 +147,4 @@ ReactQuery for server state paired with React hooks and contexts for UI state ma
 - Added testing.
 - Added Zod [link](https://zod.dev/?id=introduction)
 - Used a TailwindCSS Library for components
+- Image fallbacks and better image caching
