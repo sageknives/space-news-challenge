@@ -1,6 +1,10 @@
+import { SEARCH_DEBOUNCE_TIME } from "@/constants/api";
 import { useEffect, useState } from "react";
 
-export default function useDebounce<T>(value: T, delay: number = 500) {
+export default function useDebounce<T>(
+  value: T,
+  delay: number = SEARCH_DEBOUNCE_TIME,
+) {
   const [debouncedValue, setDebouncedValue] = useState(value);
 
   useEffect(() => {
