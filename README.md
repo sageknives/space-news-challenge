@@ -1,8 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Usage
+
+View a single feed of articles, blog posts and reports using Space News with the ability to filter down results by text search.
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+Second, run the development server:
 
 ```bash
 npm run dev
@@ -12,23 +24,58 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. Supports hot-reloading.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Alternative, build and start a production version locally:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm run build && npm run start
+# or
+yarn build && yarn start
+# or
+pnpm build && pnpm start
+```
 
-## Learn More
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. Does not support hot reloading.
 
-To learn more about Next.js, take a look at the following resources:
+To view a live demo you can visit [Demo Link]() which is hosted and [deployed to vercel](https://nextjs.org/docs/deployment) everytime a branch is merged to main.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Libraries
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Pros and Cons for choices
 
-## Deploy on Vercel
+- React Query
+  - Pros
+    - Built in cacheing [Link]()
+    - Easy to set cache time
+    - Good Error Handling
+    - Very configurable
+  - Cons
+    - Have to figure out a good cache time strategy
+- Tailwind
+  - Pros
+    - Components are easy to still
+    - SSR friendly
+    - Typescript Friendly
+    - Tailwind is very configurable and extendable[Link]()
+  - Cons
+    - It feels a bit verbose if you aren't used to it
+- [Next.js](https://nextjs.org/)
+  - Pros
+    - Seo Friendly
+    - Server Actions
+  - Cons
+    - TBD
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Suggestions if app was larger and need to scale
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Feature Suggestion
+
+## Error and logging considerations
+
+## Post Mortem
+
+- [Tailwind Typograph]() could have been used to have simpler cleaner styling.
+
+- Strategy for sort of feed
+- Maybe tabs or ui selector for each type instead of all in one feed?
